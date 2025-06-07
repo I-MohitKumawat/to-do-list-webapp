@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do App</title>
+    <link rel="stylesheet" href="/complete-to-do-app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To-Do App 🫡</h1>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">0 of 0 tasks completed</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <input type="text" class="task-input" id="taskInput" placeholder="What needs to be done?" maxlength="200">
+                <input type="date" class="date-input" id="dueDateInput">
+                <select class="priority-select" id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button class="add-btn" id="addBtn">Add Task</button>
+            </div>
+
+            <div class="controls">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <select class="sort-select" id="sortSelect">
+                    <option value="date">Sort by Date Added</option>
+                    <option value="due">Sort by Due Date</option>
+                    <option value="priority">Sort by Priority</option>
+                    <option value="status">Sort by Status</option>
+                </select>
+
+                <div class="bulk-actions">
+                    <button class="bulk-btn" id="markAllBtn">Mark All Complete</button>
+                    <button class="bulk-btn" id="clearCompletedBtn">Clear Completed</button>
+                </div>
+            </div>
+
+            <div class="task-list" id="taskList"></div>
+        </div>
+    </div>
+
+    <div class="undo-container" id="undoContainer">
+        <span id="undoMessage">Task deleted</span>
+        <button class="undo-btn" id="undoBtn">Undo</button>
+    </div>
+
+    <div class="celebration-message" id="celebrationMessage">
+        🎉 Congratulations! 🎉<br>
+        All tasks completed!
+    </div>
+
+    <script src="/complete-to-do-app.js">
+        
+    </script>
+</body>
+</html>
